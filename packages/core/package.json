@@ -111,7 +111,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mozilla-services/react-jsonschema-form.git"
+    "url": "git+https://github.com/nhducit/react-jsonschema-form.git"
   },
   "author": "Nicolas Perriault <nperriault@mozilla.com>",
   "keywords": [
