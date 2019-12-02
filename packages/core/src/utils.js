@@ -1,6 +1,5 @@
 import React from "react";
 import * as ReactIs from "react-is";
-import fill from "core-js/library/fn/array/fill";
 import validateFormData, { isValid } from "./validate";
 import union from "lodash/union";
 
@@ -260,8 +259,9 @@ function computeDefaults(
             const fillerSchema = Array.isArray(schema.items)
               ? schema.additionalItems
               : schema.items;
-            const fillerEntries = fill(
-              new Array(schema.minItems - defaultsLength),
+            const fillerEntries = new Array(
+              schema.minItems - defaultsLength
+            ).fill(
               computeDefaults(fillerSchema, fillerSchema.defaults, definitions)
             );
             // then fill up the rest with either the item default or empty, up to minItems
